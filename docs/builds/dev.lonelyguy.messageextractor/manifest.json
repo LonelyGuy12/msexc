@@ -1,0 +1,11 @@
+{
+  "name": "Message Extractor",
+  "description": "Exports loaded chat messages (old cache included) to JSON. Scroll up first!",
+  "authors": [
+    {
+      "name": "LonelyGuy12"
+    }
+  ],
+  "main": "index.js",
+  "hash": "9c6561ce24076ddee84da42522f8c796b88047960d6673a033894fa448ef6838"
+}

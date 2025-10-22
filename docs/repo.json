@@ -1,0 +1,10 @@
+{
+  "$meta": {
+    "name": "Kettu Plugins",
+    "description": "Plugins for Kettu by LonelyGuy12"
+  },
+  "dev.lonelyguy.messageextractor": {
+    "version": "1.0.0",
+    "alwaysFetch": true
+  }
+}
