@@ -11,9 +11,15 @@
   function makePlugin(bunny, definePlugin){
     return definePlugin({
       start: function(){
+        try {
+          var findAssetId0 = (bunny && bunny.api && bunny.api.assets && bunny.api.assets.findAssetId) || function(){ return undefined; };
+          var showToast0 = bunny && bunny.ui && bunny.ui.toasts && bunny.ui.toasts.showToast;
+          if (showToast0) showToast0("Message Extractor loaded", findAssetId0("Check"));
+        } catch (e) {}
         var unregister = bunny.api.commands.registerCommand({
           name: "extractmsgs",
           description: "Export current channel messages to JSON (scroll up first).",
+          shouldHide: function(){ return false; },
           execute: function(_args, _ctx){
             try {
               var channels = safeGet(bunny, "metro.common.channels");
